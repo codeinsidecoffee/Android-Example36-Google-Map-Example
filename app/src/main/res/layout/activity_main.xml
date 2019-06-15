@@ -1,0 +1,76 @@
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txtSearchLocation"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/txtSearchLocation"
+        android:onClick="onClick"
+        android:text="Search" />
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.priyanka.mapsdemo.MapsActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btnhopistals" />
+
+    <Button
+        android:id="@+id/btnhopistals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtSearchLocation"
+        android:onClick="onClick"
+        android:text="Hospitals" />
+
+    <Button
+        android:id="@+id/btnschools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSearchLocation"
+        android:layout_toEndOf="@+id/btnhopistals"
+        android:onClick="onClick"
+        android:text="Schools" />
+
+    <Button
+        android:id="@+id/btnrestaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSearchLocation"
+        android:layout_toEndOf="@+id/btnschools"
+        android:onClick="onClick"
+        android:text="Restautants" />
+
+    <Button
+        android:id="@+id/btnto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnrestaurants"
+        android:layout_toEndOf="@+id/btnrestaurants"
+        android:onClick="onClick"
+        android:text="To" />
+
+
+</RelativeLayout>
